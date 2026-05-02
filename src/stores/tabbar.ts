@@ -7,17 +7,15 @@ export const useTabbarStore = defineStore('tabbar', () => {
   const tabbarList = ref<TabbarItem[]>([
     {
       text: '首页',
-      iconPath: 'home',
-      selectedIconPath: 'home-fill',
-      pagePath: '/pages/home/home',
-      isDot: true,
+      iconPath: '/static/tabbar/home.png',
+      selectedIconPath: '/static/tabbar/home_selected.png',
+      pagePath: '/pages/home/index',
     },
     {
-      text: '关于',
-      iconPath: 'account',
-      selectedIconPath: 'account-fill',
-      pagePath: '/pages/about/about',
-      count: 3,
+      text: '我的',
+      iconPath: '/static/tabbar/me.png',
+      selectedIconPath: '/static/tabbar/me_selected.png',
+      pagePath: '/pages/mine/index',
     },
   ])
 

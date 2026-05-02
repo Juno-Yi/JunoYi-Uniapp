@@ -1,43 +1,10 @@
 {
   "pages": [
     {
-      "path": "pages/home/home"
+      "path": "pages/home/index"
     },
     {
-      "path": "pages/home/uview-intro"
-    },
-    {
-      "path": "pages/home/http-demo"
-    },
-    {
-      "path": "pages/home/pinia-demo"
-    },
-    {
-      "path": "pages/home/components-demo"
-    },
-    {
-      "path": "pages/home/create-demo"
-    },
-    {
-      "path": "pages/about/about"
-    },
-    {
-      "path": "pages/about/about-me"
-    },
-    {
-      "path": "pages/about/contributors"
-    },
-    {
-      "path": "pages/about/faq"
-    },
-    {
-      "path": "pages/about/guide"
-    },
-    {
-      "path": "pages/about/license"
-    },
-    {
-      "path": "pages/about/settings"
+      "path": "pages/mine/index"
     }
   ],
   "globalStyle": {
@@ -57,15 +24,18 @@
     "borderStyle": "@tabBorderStyle",
     "list": [
       {
-        "pagePath": "pages/home/home"
+        "pagePath": "pages/home/index"
       },
       {
-        "pagePath": "pages/about/about"
+        "pagePath": "pages/mine/index"
       }
     ]
   },
   "easycom": {
-    "autoscan": true
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "uview-pro/components/u-$1/u-$1.vue"
+    }
   },
   "subPackages": []
 }
