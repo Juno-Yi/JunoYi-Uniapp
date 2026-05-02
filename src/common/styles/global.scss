@@ -1,0 +1,291 @@
+/**
+ * 全局样式文件
+ * 定义项目通用的样式变量、混合、工具类等
+ */
+
+/* ==================== 颜色变量 ==================== */
+$primary-color: #667eea;
+$primary-light: #8b9cf5;
+$primary-dark: #5568d3;
+
+$success-color: #19be6b;
+$warning-color: #ff9900;
+$error-color: #fa3534;
+$info-color: #909399;
+
+$text-color: #333333;
+$text-color-secondary: #666666;
+$text-color-placeholder: #999999;
+$text-color-disabled: #c0c4cc;
+
+$bg-color: #ffffff;
+$bg-color-page: #f8f8f8;
+$bg-color-gray: #f5f5f5;
+
+$border-color: #e4e7ed;
+$border-color-light: #ebeef5;
+$border-color-lighter: #f2f6fc;
+
+/* ==================== 尺寸变量 ==================== */
+$border-radius-base: 8rpx;
+$border-radius-medium: 12rpx;
+$border-radius-large: 16rpx;
+$border-radius-round: 999rpx;
+
+$spacing-xs: 8rpx;
+$spacing-sm: 12rpx;
+$spacing-base: 16rpx;
+$spacing-md: 24rpx;
+$spacing-lg: 32rpx;
+$spacing-xl: 48rpx;
+
+/* ==================== 字体大小 ==================== */
+$font-size-xs: 20rpx;
+$font-size-sm: 24rpx;
+$font-size-base: 28rpx;
+$font-size-md: 32rpx;
+$font-size-lg: 36rpx;
+$font-size-xl: 40rpx;
+
+/* ==================== 阴影 ==================== */
+$box-shadow-light: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+$box-shadow-base: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+$box-shadow-medium: 0 8rpx 24rpx rgba(0, 0, 0, 0.12);
+$box-shadow-heavy: 0 12rpx 32rpx rgba(0, 0, 0, 0.16);
+
+/* ==================== 过渡动画 ==================== */
+$transition-base: all 0.3s ease;
+$transition-fast: all 0.2s ease;
+$transition-slow: all 0.5s ease;
+
+/* ==================== 工具类 ==================== */
+
+// 文本省略
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-ellipsis-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Flex 布局
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+// 间距
+.mt-xs { margin-top: $spacing-xs; }
+.mt-sm { margin-top: $spacing-sm; }
+.mt-base { margin-top: $spacing-base; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+.mt-xl { margin-top: $spacing-xl; }
+
+.mb-xs { margin-bottom: $spacing-xs; }
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-base { margin-bottom: $spacing-base; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+.mb-xl { margin-bottom: $spacing-xl; }
+
+.ml-xs { margin-left: $spacing-xs; }
+.ml-sm { margin-left: $spacing-sm; }
+.ml-base { margin-left: $spacing-base; }
+.ml-md { margin-left: $spacing-md; }
+.ml-lg { margin-left: $spacing-lg; }
+.ml-xl { margin-left: $spacing-xl; }
+
+.mr-xs { margin-right: $spacing-xs; }
+.mr-sm { margin-right: $spacing-sm; }
+.mr-base { margin-right: $spacing-base; }
+.mr-md { margin-right: $spacing-md; }
+.mr-lg { margin-right: $spacing-lg; }
+.mr-xl { margin-right: $spacing-xl; }
+
+.pt-xs { padding-top: $spacing-xs; }
+.pt-sm { padding-top: $spacing-sm; }
+.pt-base { padding-top: $spacing-base; }
+.pt-md { padding-top: $spacing-md; }
+.pt-lg { padding-top: $spacing-lg; }
+.pt-xl { padding-top: $spacing-xl; }
+
+.pb-xs { padding-bottom: $spacing-xs; }
+.pb-sm { padding-bottom: $spacing-sm; }
+.pb-base { padding-bottom: $spacing-base; }
+.pb-md { padding-bottom: $spacing-md; }
+.pb-lg { padding-bottom: $spacing-lg; }
+.pb-xl { padding-bottom: $spacing-xl; }
+
+.pl-xs { padding-left: $spacing-xs; }
+.pl-sm { padding-left: $spacing-sm; }
+.pl-base { padding-left: $spacing-base; }
+.pl-md { padding-left: $spacing-md; }
+.pl-lg { padding-left: $spacing-lg; }
+.pl-xl { padding-left: $spacing-xl; }
+
+.pr-xs { padding-right: $spacing-xs; }
+.pr-sm { padding-right: $spacing-sm; }
+.pr-base { padding-right: $spacing-base; }
+.pr-md { padding-right: $spacing-md; }
+.pr-lg { padding-right: $spacing-lg; }
+.pr-xl { padding-right: $spacing-xl; }
+
+// 文本对齐
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+// 文本颜色
+.text-primary { color: $primary-color; }
+.text-success { color: $success-color; }
+.text-warning { color: $warning-color; }
+.text-error { color: $error-color; }
+.text-info { color: $info-color; }
+.text-secondary { color: $text-color-secondary; }
+.text-placeholder { color: $text-color-placeholder; }
+
+// 背景颜色
+.bg-primary { background-color: $primary-color; }
+.bg-success { background-color: $success-color; }
+.bg-warning { background-color: $warning-color; }
+.bg-error { background-color: $error-color; }
+.bg-white { background-color: $bg-color; }
+.bg-gray { background-color: $bg-color-gray; }
+.bg-page { background-color: $bg-color-page; }
+
+// 圆角
+.radius-base { border-radius: $border-radius-base; }
+.radius-medium { border-radius: $border-radius-medium; }
+.radius-large { border-radius: $border-radius-large; }
+.radius-round { border-radius: $border-radius-round; }
+
+// 阴影
+.shadow-light { box-shadow: $box-shadow-light; }
+.shadow-base { box-shadow: $box-shadow-base; }
+.shadow-medium { box-shadow: $box-shadow-medium; }
+.shadow-heavy { box-shadow: $box-shadow-heavy; }
+
+// 字体大小
+.font-xs { font-size: $font-size-xs; }
+.font-sm { font-size: $font-size-sm; }
+.font-base { font-size: $font-size-base; }
+.font-md { font-size: $font-size-md; }
+.font-lg { font-size: $font-size-lg; }
+.font-xl { font-size: $font-size-xl; }
+
+// 字体粗细
+.font-normal { font-weight: normal; }
+.font-bold { font-weight: bold; }
+.font-600 { font-weight: 600; }
+
+/* ==================== 常用混合 ==================== */
+
+// 清除浮动
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// 单行文本省略
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行文本省略
+@mixin ellipsis-multi($lines: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 居中定位
+@mixin center-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 隐藏滚动条
+@mixin hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+// 渐变背景
+@mixin gradient-bg($start-color, $end-color, $deg: 135deg) {
+  background: linear-gradient($deg, $start-color, $end-color);
+}
+
+// 卡片样式
+@mixin card {
+  background: $bg-color;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow-base;
+  padding: $spacing-md;
+}
+
+// 按钮点击效果
+@mixin active-scale($scale: 0.95) {
+  transition: $transition-fast;
+  &:active {
+    transform: scale($scale);
+  }
+}
+
+
