@@ -10,6 +10,7 @@ declare module 'vue' {
     AppPage: typeof import('./src/components/app-page/app-page.vue')['default']
     AppTabbar: typeof import('./src/components/app-tabbar/app-tabbar.vue')['default']
     CustomNavbar: typeof import('./src/components/custom-navbar/custom-navbar.vue')['default']
+    UAvatar: typeof import('uview-pro/components/u-avatar/u-avatar.vue')['default']
     UBadge: typeof import('uview-pro/components/u-badge/u-badge.vue')['default']
     UConfigProvider: typeof import('uview-pro/components/u-config-provider/u-config-provider.vue')['default']
     UIcon: typeof import('uview-pro/components/u-icon/u-icon.vue')['default']
