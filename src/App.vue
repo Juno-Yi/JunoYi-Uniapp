@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onLaunch } from '@dcloudio/uni-app'
-import { fetchRecordMpAccess } from '@/api/access'
 import { useUserStore } from '@/stores'
 
 const userStore = useUserStore()
@@ -27,13 +26,6 @@ function getCurrentUserId() {
 }
 
 onLaunch((options) => {
-  // fetchRecordMpAccess({
-  //   userId: getCurrentUserId(),
-  //   scene: options?.scene != null ? String(options.scene) : undefined,
-  //   pagePath: options?.path || undefined,
-  // }).catch((error) => {
-  //   console.error('记录小程序访问失败：', error)
-  // })
 })
 </script>
 

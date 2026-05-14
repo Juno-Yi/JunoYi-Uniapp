@@ -5,7 +5,7 @@ import request from '@/utils/request'
  */
 export function fetchLogin(data: Api.Auth.WeChatMpLoginDTO) {
   return request.post<Api.Auth.AuthVO>({
-    url: '/wechat/mp/login',
+    url: '/auth/wechat/mp/login',
     data: data,
   })
 }
@@ -15,7 +15,7 @@ export function fetchLogin(data: Api.Auth.WeChatMpLoginDTO) {
  */
 export function fetchRefreshToken(refreshToken: string){
   return request.post<Api.Auth.AuthVO>({
-    url: '/wechat/mp/refresh',
+    url: '/auth/wechat/mp/refresh',
     params: { refreshToken: refreshToken }
   })
 }
@@ -25,6 +25,6 @@ export function fetchRefreshToken(refreshToken: string){
  */
 export function fetchLogout(){
   return request.post<void>({
-    url: '/wechat/mp/logout'
+    url: '/auth/wechat/mp/logout'
   })
 }

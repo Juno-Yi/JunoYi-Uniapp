@@ -32,9 +32,11 @@ onShareTimeline(() => {
 </script>
 
 <template>
-  <app-page nav-title="首页" show-tabbar :nav-scroll-change="true" @scrolltolower="">
+  <app-page nav-title="首页" show-tabbar :nav-scroll-change="true" navTitle="首页" nav-color="#000" @scrolltolower="">
     <view class="home-page">
-      
+
+      <!--  这里完成页面样式模版开发    -->
+
     </view>
   </app-page>
 </template>

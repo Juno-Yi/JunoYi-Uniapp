@@ -25,7 +25,12 @@ watch(() => userStore.isLogin, (isLogin) => {
 <template>
   <app-page show-tabbar :nav-scroll-change="true" :disable-scroll="true">
     <view class="mine-page">
-      
+
+      <!--  Demo演示登录  -->
+      <view class="user-info">
+
+      </view>
+
     </view>
   </app-page>
 </template>
