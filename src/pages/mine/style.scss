@@ -1,50 +1,19 @@
 .mine-page {
   min-height: 100vh;
-  padding: 32rpx;
   box-sizing: border-box;
   background: #f7f8fa;
 }
 
-.user-card {
+.header-box {
+  height: 200px;
+}
+
+.not-login, .is-login{
+  width: 100%;
+  height: 100%;
+  border: black solid 1px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 32rpx;
-  background: #fff;
-  border-radius: 24rpx;
-  box-shadow: 0 12rpx 40rpx rgba(0, 0, 0, 0.05);
-}
-
-.user-avatar {
-  flex-shrink: 0;
-}
-
-.user-content {
-  flex: 1;
-  margin-left: 24rpx;
-  overflow: hidden;
-}
-
-.user-name {
-  font-size: 34rpx;
-  font-weight: 600;
-  color: #1f2329;
-  line-height: 48rpx;
-}
-
-.user-name.is-guest {
-  color: #86909c;
-}
-
-.user-phone {
-  margin-top: 12rpx;
-  font-size: 26rpx;
-  color: #86909c;
-  line-height: 36rpx;
-}
-
-.user-action {
-  margin-left: 16rpx;
-  font-size: 26rpx;
-  color: #3c9cff;
-  white-space: nowrap;
+  justify-content: center;
 }

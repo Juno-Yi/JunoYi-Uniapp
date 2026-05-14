@@ -1,56 +1,42 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue'
-import { onShow } from '@dcloudio/uni-app'
+import { computed } from 'vue'
 import { useUserStore } from '@/stores'
 
 const userStore = useUserStore()
 
-const displayName = computed(() => userStore.nickName || userStore.userName || '未登录')
-const displayPhone = computed(() => userStore.phoneNumber || (userStore.isLogin ? '未绑定手机号' : '点击前往登录'))
-const avatarText = computed(() => (displayName.value || '未').slice(0, 1))
+const displayAvatar = computed(() => userStore.avatar || '')
+const displayName = computed(() => userStore.nickName || '')
+const displayPhone = computed(() => userStore.phoneNumber || '')
 
-function goLogin() {
-  if (userStore.isLogin)
-    return
-
+/**
+ * 跳转登录页面
+ */
+const goToLogin = () => {
   uni.navigateTo({
-    url: '/pages/auth/login/index',
+    url: '/pages/auth/login/index'
   })
 }
-
-onShow(() => {
-  // 页面展示时依赖用户状态自动刷新
-})
-
-watch(() => userStore.isLogin, () => {
-  // 监听登录状态变化，页面展示内容自动更新
-})
 </script>
 
 <template>
   <app-page show-tabbar :nav-scroll-change="true" :disable-scroll="true">
     <view class="mine-page">
-      <view class="user-card" @click="goLogin">
-        <u-avatar
-          :src="userStore.avatar"
-          :text="avatarText"
-          size="72"
-          shape="circle"
-          class="user-avatar"
-        />
-
-        <view class="user-content">
-          <view class="user-name" :class="{ 'is-guest': !userStore.isLogin }">
-            {{ displayName }}
-          </view>
-          <view class="user-phone">
-            {{ displayPhone }}
-          </view>
+     
+      <!-- 用于JunoYi框架配套小程序登录Demo演示 -->
+      <view class="header-box">
+        <!-- 用户未登录 -->
+        <view v-if="!userStore.isLogin" class="not-login">
+          <text>【调试】：未登录</text>
+          <button @click="goToLogin">登录</button>
         </view>
+      </view>
 
-        <view v-if="!userStore.isLogin" class="user-action">
-          去登录
-        </view>
+      <!-- 用户登录 -->
+      <view class="is-login" v-if="userStore.isLogin">
+          <text>【调试】：已登录</text>
+          <u-avatar :src="displayAvatar"></u-avatar>
+          <text>用户昵称：{{ displayName }}</text>
+          <text>用户手机号：{{ displayPhone }}</text>
       </view>
     </view>
   </app-page>
