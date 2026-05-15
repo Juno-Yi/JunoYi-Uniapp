@@ -24,7 +24,7 @@ interface AppConfig {
 const configs: Record<EnvType, AppConfig> = {
   // 开发环境
   development: {
-    apiBaseUrl: 'http://localhost:7589',
+    apiBaseUrl: 'http://localhost:7588',
     apiPrefix: '',
     timeout: 15000,
     showLog: true,
