@@ -14,5 +14,13 @@ declare namespace Api.Auth {
         refreshToken: string
     }
 
-    
+    /** 登录用户信息 VO */
+    interface OauthUserInfoVO {
+        userId: number
+        userName: string
+        nickName: string
+        avatar: string
+        phoneNumber: string
+        email: string
+    }
 }

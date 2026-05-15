@@ -33,7 +33,7 @@ export function fetchLogout(){
  * 获取用户信息
  */
 export function fetchGetInfo(){
-  return request.get<any>({
+  return request.get<Api.Auth.OauthUserInfoVO>({
     url: '/auth/wechat/mp/info'
   })
 }
