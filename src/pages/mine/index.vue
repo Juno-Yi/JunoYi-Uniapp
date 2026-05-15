@@ -70,7 +70,7 @@ const logout = async () => {
       </view>
 
       <view class="body">
-        <button @click="logout">退出登录</button>
+        <button v-if="userStore.isLogin" @click="logout">退出登录</button>
       </view>
 
     </view>
