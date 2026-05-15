@@ -28,3 +28,12 @@ export function fetchLogout(){
     url: '/auth/wechat/mp/logout'
   })
 }
+
+/**
+ * 获取用户信息
+ */
+export function fetchGetInfo(){
+  return request.get<any>({
+    url: '/auth/wechat/mp/info'
+  })
+}

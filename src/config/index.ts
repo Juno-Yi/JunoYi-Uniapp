@@ -31,7 +31,7 @@ const configs: Record<EnvType, AppConfig> = {
   },
   // 生产环境
   production: {
-    apiBaseUrl: 'https://api.zhidai.junoyi.com',
+    apiBaseUrl: 'https://api.junoyi.com',
     apiPrefix: '',
     timeout: 15000,
     showLog: false,
